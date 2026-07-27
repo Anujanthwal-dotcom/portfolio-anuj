@@ -3,34 +3,21 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { GithubIcon, LinkedinIcon, LeetCodeIcon, MailIcon } from "./SocialIcons";
-import { siteConfig, stats, tags } from "@/lib/data";
+import { siteConfig, stats, tags, socialLinks } from "@/lib/data";
 
-const socialIcons = [
-  {
-    icon: GithubIcon,
-    href: siteConfig.socials.github,
-    label: "GitHub",
-    hoverClass: "hover:text-social-github",
-  },
-  {
-    icon: LinkedinIcon,
-    href: siteConfig.socials.linkedin,
-    label: "LinkedIn",
-    hoverClass: "hover:text-social-linkedin",
-  },
-  {
-    icon: LeetCodeIcon,
-    href: siteConfig.socials.leetcode,
-    label: "LeetCode",
-    hoverClass: "hover:text-yellow-500",
-  },
-  {
-    icon: MailIcon,
-    href: siteConfig.socials.email,
-    label: "Email",
-    hoverClass: "hover:text-social-email",
-  },
-];
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  GitHub: GithubIcon,
+  LinkedIn: LinkedinIcon,
+  LeetCode: LeetCodeIcon,
+  Email: MailIcon,
+};
+
+const hoverClassMap: Record<string, string> = {
+  GitHub: "hover:text-social-github",
+  LinkedIn: "hover:text-social-linkedin",
+  LeetCode: "hover:text-yellow-500",
+  Email: "hover:text-social-email",
+};
 
 export default function Hero() {
   return (
@@ -92,18 +79,21 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-8 flex gap-4"
           >
-            {socialIcons.map(({ icon: Icon, href, label, hoverClass }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className={`text-muted transition-colors ${hoverClass}`}
-              >
-                <Icon className="h-5 w-5" />
-              </a>
-            ))}
+            {socialLinks.map(({ href, label }) => {
+              const Icon = iconMap[label];
+              return (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={`text-muted transition-colors ${hoverClassMap[label]}`}
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              );
+            })}
           </motion.div>
         </div>
 

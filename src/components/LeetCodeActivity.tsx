@@ -173,7 +173,9 @@ export default function LeetCodeActivity() {
                     className="h-full rounded-full bg-accent"
                     initial={{ width: 0 }}
                     whileInView={{
-                      width: `${(l.count / 397) * 100}%`,
+                      width: stats.totalSolved > 0
+                        ? `${(l.count / stats.totalSolved) * 100}%`
+                        : "0%",
                     }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.5 }}

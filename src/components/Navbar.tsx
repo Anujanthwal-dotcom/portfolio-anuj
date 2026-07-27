@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/data";
 
@@ -64,27 +65,37 @@ export default function Navbar() {
         </div>
       </div>
 
-      {mobileOpen && (
-        <div className="border-t border-card-border bg-background px-6 pb-6 pt-4 md:hidden">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block py-2 text-sm text-muted transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="#contact"
-            onClick={() => setMobileOpen(false)}
-            className="mt-4 block rounded-full bg-accent px-4 py-2 text-center text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden border-t border-card-border bg-background md:hidden"
           >
-            Get in touch
-          </a>
-        </div>
-      )}
+            <div className="px-6 pb-6 pt-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-2 text-sm text-muted transition-colors hover:text-foreground"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="#contact"
+                onClick={() => setMobileOpen(false)}
+                className="mt-4 block rounded-full bg-accent px-4 py-2 text-center text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+              >
+                Get in touch
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

@@ -3,7 +3,7 @@ export const siteConfig = {
   role: "Full-Stack Developer",
   email: "anujanthwal98765432@gmail.com",
   description:
-    "Full-stack developer building scalable systems with Spring Boot, React, and PostgreSQL. Passionate about clean architecture, payments, and developer tooling.",
+    "Full-stack developer building scalable systems with NestJS, React, and PostgreSQL. Passionate about clean architecture, payments, and developer tooling.",
   portrait: "/portrait.jpg",
   socials: {
     github: "https://github.com/Anujanthwal-dotcom",
@@ -13,11 +13,16 @@ export const siteConfig = {
   },
 };
 
+export const socialLinks = [
+  { href: "https://github.com/Anujanthwal-dotcom", label: "GitHub" },
+  { href: "https://linkedin.com/in/anuj-anthwal", label: "LinkedIn" },
+  { href: "https://leetcode.com/u/Strika_24/", label: "LeetCode" },
+  { href: "mailto:anujanthwal98765432@gmail.com", label: "Email" },
+];
+
 export const navLinks = [
   { label: "Work", href: "#work" },
-  { label: "Blog", href: "#blog" },
   { label: "DSA", href: "#dsa" },
-  { label: "System Design", href: "#system-design" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -28,111 +33,59 @@ export const stats = [
 ];
 
 export const tags = [
-  "Java",
-  "NestJS",
   "TypeScript",
-  "Spring Boot",
+  "NestJS",
   "React",
+  "LangChain",
+  "LangGraph",
+  "Node.js",
   "PostgreSQL",
   "Docker",
-  "Node.js",
 ];
 
-export const recentWriting = [
-  {
-    title: "Building a Design System from Scratch",
-    date: "May 20, 2026",
-    category: "Engineering",
-    slug: "building-design-system",
-  },
-  {
-    title: "Why I Switched to Next.js App Router",
-    date: "Apr 15, 2026",
-    category: "Next.js",
-    slug: "nextjs-app-router",
-  },
-  {
-    title: "Lessons from Shipping 10 Products",
-    date: "Mar 8, 2026",
-    category: "Career",
-    slug: "lessons-shipping-products",
-  },
-  {
-    title: "Optimizing React Native Performance",
-    date: "Feb 22, 2026",
-    category: "React Native",
-    slug: "react-native-performance",
-  },
-];
 
-export const systemDesign = [
-  {
-    title: "Designing a Real-Time Chat System",
-    date: "Jun 10, 2026",
-    category: "System Design",
-    description:
-      "Deep dive into WebSocket architecture, message queues, and scaling strategies for a real-time messaging platform.",
-    slug: "real-time-chat-system",
-  },
-  {
-    title: "URL Shortener at Scale",
-    date: "May 5, 2026",
-    category: "System Design",
-    description:
-      "How to design a URL shortening service that handles billions of redirects with low latency.",
-    slug: "url-shortener-scale",
-  },
-  {
-    title: "Designing a Rate Limiter",
-    date: "Apr 1, 2026",
-    category: "System Design",
-    description:
-      "Exploring token bucket, sliding window, and fixed window algorithms for API rate limiting.",
-    slug: "designing-rate-limiter",
-  },
-];
 
 export const projects = [
   {
-    title: "Ticketly — Ticket Booking Platform",
+    title: "Ticketly — Ticket Booking System",
     description:
-      "Architected a modular monolith with layered architecture for a ticket booking platform. Integrated Stripe payments with server-side validation, OAuth 2.0 authentication via Spring Security, and Redis caching with automatic invalidation. Built an AI-powered search layer using Spring AI for fuzzy event filtering.",
-    tags: ["Java", "React", "PostgreSQL", "TypeScript", "Redis", "Docker"],
-    link: "https://github.com/Anujanthwal-dotcom/Ticktetly",
-    github: "https://github.com/Anujanthwal-dotcom/Ticktetly",
+      "Implemented OAuth 2.0 (Google/Facebook) via Passport.js with ElastiCache Redis session storage and session fixation defense. Integrated Stripe PaymentElement with PaymentIntent workflows, webhook handlers, and 3-point verification checks. Built an AI search tool using Google Gemini & LangChain to parse natural queries into filters, with keyword fallbacks. Engineered pessimistic row locking in RDS PostgreSQL to prevent concurrent double-booking. Automated post-booking PDF ticket generation, AWS S3 storage, and email delivery via Nodemailer.",
+    tags: ["React", "NestJS", "TypeScript", "AWS", "Redis", "LangChain"],
+    link: "https://github.com/Anujanthwal-dotcom/Full-Stack-Event-Ticket-Booking-System",
+    github: "https://github.com/Anujanthwal-dotcom/Full-Stack-Event-Ticket-Booking-System",
     featured: true,
     metrics: [
       { label: "Platform", value: "Web" },
       { label: "Role", value: "Solo Dev" },
-      { label: "Status", value: "In Progress" },
+      { label: "Payments", value: "Stripe" },
     ],
   },
   {
-    title: "Notes Buddy — Note-Sharing Platform",
+    title: "Actionify — AI Meeting Notes Processor",
     description:
-      "A note-sharing platform with PDF upload/download via S3-compatible MinIO storage. Reduced malicious uploads by 98% through ClamAV integration. Deployed on a Linux VPS with Docker Compose, Nginx reverse proxy, rate limiting, and SSL/TLS.",
-    tags: ["Spring Boot", "React", "PostgreSQL", "TypeScript", "Docker"],
-    link: "https://github.com/Anujanthwal-dotcom/College-Notes-Sharing-Platform",
-    github: "https://github.com/Anujanthwal-dotcom/College-Notes-Sharing-Platform",
+      "Architected a 5-stage LangGraph AI pipeline processing transcripts down to structured Slack payloads. Implemented a dual-LLM fallback strategy, achieving 99.9% uptime for runtime extractions while guaranteeing type safety through Zod schemas. Integrated the Slack Block Kit API to programmatically deliver rich data payloads and structured action items.",
+    tags: ["NestJS", "LangGraph", "React", "LangChain", "TypeScript"],
+    link: "https://github.com/Anujanthwal-dotcom/actionify",
+    github: "https://github.com/Anujanthwal-dotcom/actionify",
     featured: false,
     metrics: [
       { label: "Platform", value: "Web" },
       { label: "Role", value: "Solo Dev" },
-      { label: "Security", value: "98% safer" },
+      { label: "Pipeline", value: "5-stage" },
     ],
   },
   {
-    title: "QuickStay — Hotel Booking Platform",
+    title: "NotesBuddy — Notes Sharing Application",
     description:
-      "A full-stack hotel booking platform with Stripe payments, Clerk authentication with RBAC, Cloudinary image uploads, and real-time availability checks. Includes a dedicated owner dashboard for revenue tracking and property management.",
-    tags: ["React", "Node.js", "Express.js", "MongoDB", "Stripe", "Cloudinary"],
-    link: "https://github.com/Anujanthwal-dotcom/QuickStay-hotel-booking",
-    github: "https://github.com/Anujanthwal-dotcom/QuickStay-hotel-booking",
+      "Architected containerized file-management infrastructure via Docker, integrating MinIO object storage, ClamAV malware scanning, PostgreSQL for secure deployments and tested with 50+ beta users. Mitigated database load by 40% using an in-memory OTP cache, reducing auth latency by 180ms. Deployed the infrastructure on a Linux VPS, configuring Nginx as a reverse proxy with rate limiting, and hardened server defenses using UFW and SSL certificates.",
+    tags: ["TypeScript", "React", "NestJS", "PostgreSQL", "Docker"],
+    link: "https://github.com/Anujanthwal-dotcom/Notes-Sharing-Platform",
+    github: "https://github.com/Anujanthwal-dotcom/Notes-Sharing-Platform",
     featured: false,
     metrics: [
       { label: "Platform", value: "Web" },
       { label: "Role", value: "Solo Dev" },
-      { label: "Auth", value: "Clerk RBAC" },
+      { label: "Users", value: "50+ beta" },
     ],
   },
 ];
@@ -143,7 +96,7 @@ export const achievements = [
     description: "Creator of the Dev Katas YouTube channel teaching systems architecture to over 4,000 developers.",
     badge: "4,000+",
     organizer: "YouTube",
-    image: "/oauth.png",
+    image: "/images/oauth.png",
     link: "https://www.youtube.com/@DevKatas/featured",
   },
   {
@@ -151,7 +104,7 @@ export const achievements = [
     description: "Secured All India Rank 104 among 29,000+ participants in Unstop's weekly coding challenge.",
     badge: "AIR-104",
     organizer: "Unstop",
-    image: "/unstop.png",
+    image: "/images/unstop.png",
     link: "https://unstop.com/certificate-preview/cfa533c8-a094-49c7-bde7-34383b61210c",
   },
   {
@@ -159,7 +112,7 @@ export const achievements = [
     description: "Ranked 108th overall in the Social Summer of Code 2025 open source program.",
     badge: "108th",
     organizer: "Social (Script Foundation)",
-    image: "/ssoc.png",
+    image: "/images/ssoc.png",
   },
 ];
 

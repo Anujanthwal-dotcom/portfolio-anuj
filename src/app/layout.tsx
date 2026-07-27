@@ -26,11 +26,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Anuj Anthwal — Portfolio",
   description:
-    "Full-stack developer portfolio. Building scalable systems with Spring Boot, React, and PostgreSQL.",
+    "Full-stack developer portfolio. Building scalable systems with NestJS, React, and PostgreSQL.",
   openGraph: {
     title: "Anuj Anthwal — Portfolio",
     description:
-      "Full-stack developer portfolio. Building scalable systems with Spring Boot, React, and PostgreSQL.",
+      "Full-stack developer portfolio. Building scalable systems with NestJS, React, and PostgreSQL.",
     type: "website",
   },
 };

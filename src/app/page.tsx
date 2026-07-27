@@ -1,8 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import RecentWriting from "@/components/RecentWriting";
-import SystemDesign from "@/components/SystemDesign";
 import LeetCodeActivity from "@/components/LeetCodeActivity";
 import Experience from "@/components/Experience";
 import Achievements from "@/components/Achievements";
@@ -15,8 +13,6 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <Projects />
-        <RecentWriting />
-        <SystemDesign />
         <LeetCodeActivity />
         <Experience />
         <Achievements />

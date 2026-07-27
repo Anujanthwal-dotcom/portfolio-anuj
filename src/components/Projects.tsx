@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "./SocialIcons";
 import { projects } from "@/lib/data";
 
@@ -42,17 +41,12 @@ export default function Projects() {
               <div className="ml-4 flex gap-3">
                 <a
                   href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted transition-colors hover:text-foreground"
                   aria-label={`${project.title} GitHub`}
                 >
                   <GithubIcon className="h-[18px] w-[18px]" />
-                </a>
-                <a
-                  href={project.link}
-                  className="text-muted transition-colors hover:text-foreground"
-                  aria-label={`${project.title} Live`}
-                >
-                  <ArrowUpRight size={18} />
                 </a>
               </div>
             </div>

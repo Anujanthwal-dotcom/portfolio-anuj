@@ -9,7 +9,7 @@ export default function Experience() {
       <div className="mb-8">
         <p className="font-mono text-xs text-section-label mb-1">Experience</p>
         <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-          Two chapters. One clear arc.
+          Where I&apos;ve contributed.
         </h2>
       </div>
 

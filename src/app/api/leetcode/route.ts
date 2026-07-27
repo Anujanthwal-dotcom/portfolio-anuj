@@ -10,6 +10,7 @@ async function fetchLeetCode<T>(query: string): Promise<T> {
       Referer: "https://leetcode.com",
     },
     body: JSON.stringify({ query }),
+    next: { revalidate: 3600 },
   });
 
   if (!res.ok) throw new Error(`LeetCode API error: ${res.status}`);
@@ -79,7 +80,7 @@ export async function GET() {
   } catch {
     return NextResponse.json(
       {
-        totalSolved: 392,
+        totalSolved: 397,
         easy: 142,
         medium: 210,
         hard: 40,

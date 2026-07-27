@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon, LeetCodeIcon, MailIcon } from "./SocialIcons";
-import { siteConfig } from "@/lib/data";
+import { siteConfig, socialLinks } from "@/lib/data";
 
-const socialLinks = [
-  { icon: GithubIcon, href: siteConfig.socials.github, label: "GitHub" },
-  { icon: LinkedinIcon, href: siteConfig.socials.linkedin, label: "LinkedIn" },
-  { icon: LeetCodeIcon, href: siteConfig.socials.leetcode, label: "LeetCode" },
-  { icon: MailIcon, href: siteConfig.socials.email, label: "Email" },
-];
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  GitHub: GithubIcon,
+  LinkedIn: LinkedinIcon,
+  LeetCode: LeetCodeIcon,
+  Email: MailIcon,
+};
 
 export default function Contact() {
   return (
@@ -46,18 +46,21 @@ export default function Contact() {
             </a>
 
             <div className="flex gap-4">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="text-muted transition-colors hover:text-foreground"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
+              {socialLinks.map(({ href, label }) => {
+                const Icon = iconMap[label];
+                return (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-muted transition-colors hover:text-foreground"
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
