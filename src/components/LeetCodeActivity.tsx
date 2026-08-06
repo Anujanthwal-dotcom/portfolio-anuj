@@ -1,47 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-interface LeetCodeData {
-  totalSolved: number;
-  easy: number;
-  medium: number;
-  hard: number;
-  ranking: number;
-  totalBadges: number;
-  acceptanceRate: number;
-  fallback?: boolean;
-}
+import { useLeetCode } from "@/lib/useLeetCode";
 
 export default function LeetCodeActivity() {
-  const [data, setData] = useState<LeetCodeData | null>(null);
-
-  useEffect(() => {
-    fetch("/api/leetcode")
-      .then((res) => res.json())
-      .then(setData)
-      .catch(() =>
-        setData({
-          totalSolved: 397,
-          easy: 0,
-          medium: 0,
-          hard: 0,
-          ranking: 314560,
-          totalBadges: 4,
-          acceptanceRate: 0,
-        })
-      );
-  }, []);
+  const { data } = useLeetCode();
 
   const stats = data ?? {
-    totalSolved: 397,
+    totalSolved: 0,
     easy: 0,
     medium: 0,
     hard: 0,
-    ranking: 314560,
-    totalBadges: 4,
-    acceptanceRate: 0,
+    ranking: 0,
+    totalBadges: 0,
+    languages: [],
+    topics: [],
   };
 
   const difficultyData = [
@@ -50,15 +23,8 @@ export default function LeetCodeActivity() {
     { label: "Hard", count: stats.hard, color: "bg-red-500" },
   ];
 
-  const topics = [
-    { name: "Arrays", count: 221 },
-    { name: "Dynamic Programming", count: 77 },
-    { name: "Binary Search", count: 71 },
-    { name: "Depth-First Search", count: 71 },
-    { name: "String", count: 68 },
-    { name: "Hash Table", count: 63 },
-  ];
-  const maxCount = Math.max(...topics.map((t) => t.count));
+  const topics = stats.topics;
+  const maxCount = Math.max(...topics.map((t) => t.count), 1);
 
   return (
     <section id="dsa" className="mx-auto max-w-4xl px-6 pb-20">
@@ -140,11 +106,6 @@ export default function LeetCodeActivity() {
               </div>
             ))}
           </div>
-          {stats.acceptanceRate > 0 && (
-            <div className="mt-4 font-mono text-xs text-muted">
-              Acceptance: {stats.acceptanceRate}%
-            </div>
-          )}
         </motion.div>
 
         <motion.div
@@ -158,11 +119,10 @@ export default function LeetCodeActivity() {
             Languages
           </h3>
           <div className="space-y-3">
-            {[
-              { name: "Java", count: 354 },
-              { name: "C++", count: 42 },
-              { name: "JavaScript", count: 1 },
-            ].map((l) => (
+            {(stats.languages.length > 0
+              ? stats.languages
+              : [{ name: "—", count: 0 }]
+            ).map((l) => (
               <div key={l.name}>
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-medium">{l.name}</span>
@@ -235,6 +195,11 @@ export default function LeetCodeActivity() {
         >
           View full LeetCode profile &rarr;
         </a>
+        {data?.fallback && (
+          <p className="mt-2 font-mono text-xs text-muted">
+            Showing last synced stats — LeetCode is temporarily unavailable.
+          </p>
+        )}
       </motion.div>
     </section>
   );

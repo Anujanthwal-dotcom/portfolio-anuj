@@ -27,7 +27,7 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { label: "Years of engineering", value: "1+" },
+  { label: "Years of engineering", value: "2+" },
   { label: "Projects shipped", value: "3" },
   { label: "DSA problems solved", value: "397" },
 ];

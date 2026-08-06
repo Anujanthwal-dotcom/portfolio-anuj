@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { GithubIcon, LinkedinIcon, LeetCodeIcon, MailIcon } from "./SocialIcons";
 import { siteConfig, stats, tags, socialLinks } from "@/lib/data";
+import { useLeetCode } from "@/lib/useLeetCode";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   GitHub: GithubIcon,
@@ -20,6 +21,14 @@ const hoverClassMap: Record<string, string> = {
 };
 
 export default function Hero() {
+  const { data: leetCodeData } = useLeetCode();
+
+  const liveStats = stats.map((stat) =>
+    stat.label === "DSA problems solved"
+      ? { ...stat, value: leetCodeData ? String(leetCodeData.totalSolved) : "…" }
+      : stat
+  );
+
   return (
     <section className="mx-auto max-w-4xl px-6 pb-16 pt-24 md:pt-32">
       <div className="flex flex-col gap-12 md:flex-row md:items-start md:gap-16">
@@ -121,7 +130,7 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.6 }}
         className="mt-12 grid grid-cols-3 gap-4 border-t border-card-border pt-8"
       >
-        {stats.map((stat) => (
+        {liveStats.map((stat) => (
           <div key={stat.label}>
             <div className="text-2xl font-bold tracking-tight md:text-3xl">
               {stat.value}
