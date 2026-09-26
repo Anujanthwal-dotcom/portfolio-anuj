@@ -24,13 +24,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anuj Anthwal — Portfolio",
+  title: "Anuj Anthwal — Software Engineer | Full-Stack & Agentic AI",
   description:
-    "Full-stack developer portfolio. Building scalable systems with NestJS, React, and PostgreSQL.",
+    "Software Engineer specializing in scalable full-stack architectures, microservices, and Agentic AI workflows. Experienced in NestJS, Next.js, Google Gemini API, PostgreSQL, and distributed systems.",
   openGraph: {
-    title: "Anuj Anthwal — Portfolio",
+    title: "Anuj Anthwal — Software Engineer | Full-Stack & Agentic AI",
     description:
-      "Full-stack developer portfolio. Building scalable systems with NestJS, React, and PostgreSQL.",
+      "Software Engineer specializing in scalable full-stack architectures, microservices, and Agentic AI workflows. Experienced in NestJS, Next.js, Google Gemini API, PostgreSQL, and distributed systems.",
     type: "website",
   },
 };

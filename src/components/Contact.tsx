@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { GithubIcon, LinkedinIcon, LeetCodeIcon, MailIcon } from "./SocialIcons";
 import { siteConfig, socialLinks } from "@/lib/data";
+import { Phone, MapPin, FileText } from "lucide-react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   GitHub: GithubIcon,
@@ -15,7 +16,10 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-4xl px-6 pb-20">
       <div className="mb-8">
-        <p className="font-mono text-xs text-section-label mb-1">Contact</p>
+        <p className="font-mono text-xs text-section-label mb-1">Get in touch</p>
+        <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
+          Contact
+        </h2>
       </div>
 
       <motion.div
@@ -25,25 +29,62 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
         className="rounded-2xl border border-card-border bg-card p-8 md:p-12"
       >
-        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="flex-1">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-              Let&apos;s work together.
+              Let&apos;s build something great.
             </h2>
-            <p className="mt-4 max-w-md text-muted">
-              Open to new opportunities and interesting projects. I reply within
-              24 hours.
+            <p className="mt-4 max-w-md text-sm sm:text-base text-muted leading-relaxed">
+              Open to Software Engineering roles, full-stack development, and Agentic AI engineering.
+              Feel free to reach out directly.
             </p>
+
+            <div className="mt-6 flex flex-col gap-2 font-mono text-xs text-muted">
+              <a
+                href={siteConfig.socials.email}
+                className="flex items-center gap-2 hover:text-foreground transition-colors"
+              >
+                <MailIcon className="h-4 w-4 text-accent" />
+                {siteConfig.email}
+              </a>
+              {"phone" in siteConfig && (
+                <a
+                  href={`tel:${siteConfig.phone}`}
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
+                >
+                  <Phone className="h-4 w-4 text-accent" />
+                  {siteConfig.phone}
+                </a>
+              )}
+              {"location" in siteConfig && (
+                <div className="flex items-center gap-2">
+                  <MapPin className="h-4 w-4 text-accent" />
+                  {siteConfig.location}
+                </div>
+              )}
+            </div>
           </div>
 
-          <div className="flex flex-col items-start gap-6 md:items-end">
-            <a
-              href={siteConfig.socials.email}
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
-            >
-              <MailIcon className="h-4 w-4" />
-              Get in touch
-            </a>
+          <div className="flex flex-col items-start gap-5 md:items-end">
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href={siteConfig.socials.email}
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+              >
+                <MailIcon className="h-4 w-4" />
+                Email me
+              </a>
+
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-card-border bg-card px-5 py-2.5 font-mono text-xs font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+              >
+                <FileText className="h-4 w-4" />
+                Resume PDF
+              </a>
+            </div>
 
             <div className="flex gap-4">
               {socialLinks.map(({ href, label }) => {

@@ -37,10 +37,15 @@ export default function Experience() {
                   <p className="text-sm text-muted">{job.company}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <span className="rounded-full bg-card-border/50 px-3 py-1 font-mono text-[10px] text-muted">
                   {job.badge}
                 </span>
+                {"location" in job && job.location && (
+                  <span className="rounded-full border border-card-border bg-card-border/20 px-2.5 py-1 font-mono text-[10px] text-muted">
+                    {job.location}
+                  </span>
+                )}
                 <span className="font-mono text-xs text-muted">
                   {job.period}
                 </span>
