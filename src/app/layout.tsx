@@ -46,6 +46,9 @@ export const metadata: Metadata = {
       "text/markdown": "/llms.txt",
     },
   },
+  verification: {
+    google: "gZa6D5Gy1JN6k1e0uQI2Wwq3FjaS8leI5-Artgq1CEo",
+  },
 };
 
 export default function RootLayout({
