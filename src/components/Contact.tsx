@@ -106,6 +106,29 @@ export default function Contact() {
           </div>
         </div>
       </motion.div>
+
+      <footer className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-card-border/60 pt-8 font-mono text-xs text-muted">
+        <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+        <div className="flex items-center gap-4">
+          <a
+            href="/llms.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-dotted underline-offset-4"
+          >
+            llms.txt
+          </a>
+          <span className="text-card-border">•</span>
+          <a
+            href="/robots.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-dotted underline-offset-4"
+          >
+            robots.txt
+          </a>
+        </div>
+      </footer>
     </section>
   );
 }

@@ -1,0 +1,45 @@
+# Anuj Anthwal — Software Engineer | Full-Stack & Agentic AI
+
+> Software Engineer specializing in scalable full-stack architectures, microservices, and Agentic AI workflows. Experienced in NestJS, Next.js, Google Gemini API, PostgreSQL, Redis, and distributed systems.
+
+## Summary
+
+- Name: Anuj Anthwal
+- Location: Uttarakhand, India
+- Role: Software Engineer (Full-Stack & Agentic AI)
+- Contact: anujanthwal98765432@gmail.com | +91 9389961153
+- GitHub: https://github.com/Anujanthwal-dotcom
+- LinkedIn: https://linkedin.com/in/anuj-anthwal
+- LeetCode: https://leetcode.com/u/Strika_24/ (400+ Solved, AIR-104 Unstop)
+- YouTube: https://www.youtube.com/@DevKatas/featured (4,000+ Learners)
+
+## Core Technical Skills
+
+- Languages: TypeScript, JavaScript, Python, Rust, SQL, Java, C++
+- Frontend: Next.js, React, TailwindCSS, XYFlow, Framer Motion
+- Backend: NestJS, Node.js, Express.js, Prisma, REST APIs, Microservices
+- Agentic AI: Google Gemini API, LangChain, LangGraph, LLM Orchestration, Prompt Engineering, Structured Outputs (Zod)
+- Databases & Caching: PostgreSQL, RDS, Redis, ElastiCache, MySQL, MongoDB, MinIO
+- Cloud & DevOps: Docker, Docker Compose, AWS (S3, RDS, ElastiCache), Nginx, Linux, Git, Postman
+
+## Flagship Projects
+
+- [MindFlow](https://github.com/Anujanthwal-dotcom/mindflow): Visual Knowledge & Architecture Graph Platform. AI extraction pipeline with Google Gemini & LangChain (Zod schema validation) converting codebases & documents to DAGs on an interactive XYFlow infinite canvas with Dagre collision resolution and <2s grounded concept deep-dives.
+- [Ticketly](https://github.com/Anujanthwal-dotcom/Full-Stack-Event-Ticket-Booking-System): Distributed Ticket Booking System with PostgreSQL pessimistic row-locking concurrency defense, Stripe PaymentElement workflows, Redis session caching, and Gemini natural language query search.
+- [NotesBuddy](https://github.com/Anujanthwal-dotcom/Notes-Sharing-Platform): Containerized file-sharing infrastructure with Docker, MinIO object storage, ClamAV antivirus scanning, in-memory OTP cache reducing database load by 40%, and Nginx reverse proxy on Linux VPS.
+
+## Work Experience
+
+- [Synegrow - SDE Intern](https://linkedin.com/in/anuj-anthwal): Oct 2025 – Feb 2026. Built decoupled payment adapters in NestJS with retry backoffs (<0.5% webhook failure rate) and optimized multi-tier MySQL schemas (-35% query latency).
+- [Social Summer of Code 2025 - Contributor](https://github.com/Anujanthwal-dotcom): Jun 2025 – Jul 2025. Ranked 108th overall among thousands of participants contributing in Python and Rust.
+
+## Key Achievements & Education
+
+- AIR-104 in Unstop Weekly Coding Challenge (out of 29,000+ participants).
+- 400+ Data Structures & Algorithms problems solved on LeetCode.
+- Postman API Fundamentals Student Expert Certified.
+- Bachelor of Technology in Computer Science & Engineering, Uttarakhand Technical University (2023 – 2027).
+
+## Optional
+
+- [Full LLM Context](/llms-full.txt): Comprehensive deep-dive document covering architectural patterns, engineering metrics, and full portfolio background.

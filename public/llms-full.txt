@@ -1,0 +1,147 @@
+# Anuj Anthwal — Full Portfolio & Technical Background
+
+> Comprehensive portfolio reference document designed for Large Language Models (LLMs), AI agents, and automated crawlers.
+
+---
+
+## 1. Candidate Overview
+
+- **Full Name**: Anuj Anthwal
+- **Headline**: Software Engineer | Full-Stack & Agentic AI
+- **Location**: Uttarakhand, India
+- **Email**: anujanthwal98765432@gmail.com
+- **Phone**: +91 9389961153
+- **Primary Focus**: Scalable full-stack systems, resilient microservices, distributed caching, and Agentic AI workflows with structured outputs.
+- **GitHub**: https://github.com/Anujanthwal-dotcom
+- **LinkedIn**: https://linkedin.com/in/anuj-anthwal
+- **LeetCode**: https://leetcode.com/u/Strika_24/
+- **YouTube Channel**: https://www.youtube.com/@DevKatas/featured (4,000+ Learners Educated)
+
+---
+
+## 2. Technical Skills & Competencies
+
+### Languages
+- TypeScript, JavaScript (Node.js & Browser)
+- Python, Rust, SQL
+- Java, C++ (Competitive Programming)
+
+### Frontend Engineering
+- Frameworks: Next.js (App Router, Server Components), React 19
+- Styling: TailwindCSS, PostCSS, responsive design, dark/light theme switching
+- Visualizations & Graph UIs: XYFlow (React Flow), Dagre graph layout algorithms
+- Animation & UX: Framer Motion, Lucide Icons
+
+### Backend & Architecture
+- Frameworks: NestJS (Controllers, Providers, Modules, Guards, Interceptors, DTOs with class-validator), Express.js
+- Database ORMs: Prisma, TypeORM, raw SQL
+- Architectural Patterns: RESTful APIs, Microservices, Decoupled Payment Adapters, Event-driven / Asynchronous processing, In-Memory Rate Limiting (Token Bucket), Idempotency, Concurrency Control (Pessimistic Row Locking)
+
+### Agentic AI & LLMs
+- Models: Google Gemini API (Gemini 2.5/3.0/3.6/3.7 Flash & Pro), OpenAI models
+- Frameworks: LangChain, LangGraph
+- Capabilities: Multi-model fallback cascades, strict Zod schema extraction, prompt engineering, structured JSON outputs, heuristic recovery, Google Search Grounding for real-time citations and gotchas
+
+### Databases, Storage & Caching
+- Relational: PostgreSQL, AWS RDS PostgreSQL, MySQL
+- Caching & In-Memory: Redis, AWS ElastiCache Redis (Session storage, session fixation defense, query cache)
+- Object Storage: AWS S3, MinIO (S3-compatible self-hosted object storage)
+- NoSQL: MongoDB
+
+### DevOps, Tools & Infrastructure
+- Containerization: Docker, Docker Compose
+- Web Servers: Nginx (Reverse proxy, rate limiting, SSL termination)
+- OS & Cloud: Linux (Ubuntu/Debian VPS, UFW firewall), AWS (RDS, S3, ElastiCache)
+- Tooling: Git, GitHub, Postman (API testing, environment orchestration)
+
+---
+
+## 3. Flagship Projects
+
+### 1. MindFlow — Visual Knowledge & Architecture Graph Platform
+- **Period**: September 2026
+- **Repository**: https://github.com/Anujanthwal-dotcom/mindflow
+- **Stack**: Next.js 16, React 19, TypeScript, Google Gemini API, LangChain, Prisma, XYFlow, Dagre
+- **Key Metrics**:
+  - AI Engine: Gemini + LangChain
+  - Extraction Uptime: 100% via multi-model fallback cascade
+  - Canvas: XYFlow + Dagre automated collision resolution
+  - Deep-Dive Latency: < 2s grounded concept exploration
+- **Architecture Highlights**:
+  - Architected an AI extraction pipeline utilizing Google Gemini and LangChain with strict Zod schema validation, parsing complex technical documents and GitHub codebases into connected Directed Acyclic Graphs (DAGs).
+  - Engineered a multi-model fallback cascade (Gemini 3.6/3.7 Flash) and heuristic recovery, ensuring 100% extraction uptime and zero schema violation failures during high-traffic bursts.
+  - Integrated an interactive infinite canvas with XYFlow and an iterative Dagre collision-resolution algorithm, resolving multi-node overlaps and dynamically laying out 30+ concept nodes in real time.
+  - Built an on-demand concept deep-dive microservice leveraging Google Search Grounding, generating production gotchas, live doc citations, and syntax-highlighted code implementations in under 2 seconds.
+
+### 2. Ticketly — Distributed Ticket Booking System
+- **Period**: June 2026 – July 2026
+- **Repository**: https://github.com/Anujanthwal-dotcom/Full-Stack-Event-Ticket-Booking-System
+- **Stack**: React, NestJS, TypeScript, RDS PostgreSQL, ElastiCache Redis, AWS S3, Stripe, Google Gemini
+- **Key Metrics**:
+  - Concurrency Defense: Pessimistic Row Locking
+  - Cache Layer: ElastiCache Redis
+  - Payments: Stripe Webhooks with 3-point verification
+  - Search: Natural language query parsing via Gemini
+- **Architecture Highlights**:
+  - Implemented OAuth 2.0 (Google/Facebook) via Passport.js and ElastiCache Redis session storage with session fixation defense.
+  - Integrated Stripe PaymentElement with PaymentIntent workflows, webhook handlers, and 3-point verification checks.
+  - Built an AI search tool using Google Gemini & LangChain to parse natural queries into filters, with keyword fallbacks.
+  - Engineered pessimistic row locking in RDS PostgreSQL to prevent concurrent double-booking under race conditions.
+  - Automated post-booking PDF ticket generation (pdfkit), AWS S3 storage, and asynchronous email delivery via Nodemailer.
+  - Developed custom in-memory token bucket rate-limiter and cached show listings with automated invalidation.
+  - Hardened API security via Helmet, class-validator DTOs, CORS, exception filters, and raw-body Stripe verification.
+
+### 3. NotesBuddy — Notes Sharing Application
+- **Period**: February 2026 – March 2026
+- **Repository**: https://github.com/Anujanthwal-dotcom/Notes-Sharing-Platform
+- **Stack**: TypeScript, React, NestJS, PostgreSQL, Docker, MinIO, ClamAV, Nginx
+- **Key Metrics**:
+  - File Security: MinIO + ClamAV antivirus integration
+  - DB Load Reduction: -40% via in-memory OTP cache
+  - Auth Latency: -180ms
+  - Deployment: Docker + Nginx on Linux VPS
+- **Architecture Highlights**:
+  - Architected containerized file-management infrastructure via Docker, integrating MinIO object storage, ClamAV malware scanning, and PostgreSQL for secure deployments tested with 50+ beta users.
+  - Mitigated database load by 40% using an in-memory OTP cache, reducing auth latency by 180ms.
+  - Deployed infrastructure on a Linux VPS, configuring Nginx as a reverse proxy with rate limiting, and hardened server defenses using UFW and SSL certificates.
+
+---
+
+## 4. Professional Work Experience
+
+### Software Development Engineering Intern — Synegrow
+- **Period**: October 2025 — February 2026 (5 months)
+- **Location**: Remote
+- **Stack**: TypeScript, NestJS, MySQL, REST APIs, Axios
+- **Highlights**:
+  - Engineered payment microservices and high-throughput MySQL architectures for subscription and checkout workflows.
+  - Developed a decoupled payment adapter in NestJS using custom Axios interceptors and automated retry backoffs, reducing webhook checkout failure rates to under 0.5%.
+  - Designed a multi-tier MySQL schema for subscription coupon logic, implementing composite indexing to lower query execution latency by 35% under concurrent loads.
+
+### Open Source Contributor (SSOC 2025) — Social (Formerly Script Foundation)
+- **Period**: June 2025 — July 2025 (2 months)
+- **Location**: Remote
+- **Stack**: Python, Rust, Git, GitHub
+- **Highlights**:
+  - Engineered features and resolved vulnerabilities across open-source repositories via structured pull requests during Social Summer of Code 2025.
+  - Collaborated directly with maintainers on rigid code reviews, standardizing error handling to optimize stability.
+  - Ranked 108th overall in Social Summer of Code 2025 among thousands of contributors.
+
+---
+
+## 5. Achievements & Certifications
+
+- **AIR-104 (Unstop Weekly Coding Challenge)**: Secured All India Rank 104 out of 29,000+ competitive programming participants.
+- **Social Summer of Code 2025**: Ranked 108th overall contributor.
+- **Dev Katas Educator**: Created educational technical video tutorials covering system architecture and patterns for 4,000+ developers.
+- **Postman API Fundamentals Student Expert**: Certified in REST API design, request orchestration, automated testing, mock servers, and documentation workflows (October 2024).
+- **LeetCode Problem Solving**: 400+ algorithmic problems solved with top topic concentrations in Dynamic Programming, Hash Tables, Trees, Binary Trees, Union-Find, and Backtracking.
+
+---
+
+## 6. Education
+
+- **Degree**: Bachelor of Technology (B.Tech) in Computer Science and Engineering
+- **Institution**: Uttarakhand Technical University
+- **Period**: August 2023 – May 2027
+- **Location**: Uttarakhand, India

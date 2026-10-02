@@ -33,6 +33,11 @@ export const metadata: Metadata = {
       "Software Engineer specializing in scalable full-stack architectures, microservices, and Agentic AI workflows. Experienced in NestJS, Next.js, Google Gemini API, PostgreSQL, and distributed systems.",
     type: "website",
   },
+  alternates: {
+    types: {
+      "text/markdown": "/llms.txt",
+    },
+  },
 };
 
 export default function RootLayout({
