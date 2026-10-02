@@ -33,3 +33,6 @@ Allow: /
 # LLM Context Standard (https://llmstxt.org)
 # /llms.txt - Structured summary for LLMs and AI search engines
 # /llms-full.txt - Full comprehensive details and project architecture
+
+# Sitemap
+Sitemap: https://anujanthwal.com/sitemap.xml

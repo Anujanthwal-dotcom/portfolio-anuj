@@ -127,6 +127,15 @@ export default function Contact() {
           >
             robots.txt
           </a>
+          <span className="text-card-border">•</span>
+          <a
+            href="/sitemap.xml"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-dotted underline-offset-4"
+          >
+            sitemap.xml
+          </a>
         </div>
       </footer>
     </section>

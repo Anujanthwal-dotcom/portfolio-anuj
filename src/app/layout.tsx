@@ -24,6 +24,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "https://anujanthwal.com")
+  ),
   title: "Anuj Anthwal — Software Engineer | Full-Stack & Agentic AI",
   description:
     "Software Engineer specializing in scalable full-stack architectures, microservices, and Agentic AI workflows. Experienced in NestJS, Next.js, Google Gemini API, PostgreSQL, and distributed systems.",
