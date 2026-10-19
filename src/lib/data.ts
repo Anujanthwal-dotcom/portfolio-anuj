@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "Anuj Anthwal",
   role: "Software Engineer | Full-Stack & Agentic AI",
+  currentlyLearning: "Rust",
   email: "anujanthwal98765432@gmail.com",
   phone: "+91 9389961153",
   location: "Uttarakhand, India",

@@ -34,17 +34,31 @@ export default function Hero() {
     <section className="mx-auto max-w-4xl px-6 pb-16 pt-24 md:pt-32">
       <div className="flex flex-col gap-12 md:flex-row md:items-start md:gap-16">
         <div className="flex-1">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-card-border bg-card px-3 py-1.5"
-          >
-            <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse-dot" />
-            <span className="font-mono text-xs text-muted">
-              {siteConfig.role}
-            </span>
-          </motion.div>
+          <div className="mb-6 flex flex-wrap items-center gap-2.5">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full border border-card-border bg-card px-3 py-1.5"
+            >
+              <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse-dot" />
+              <span className="font-mono text-xs text-muted">
+                {siteConfig.role}
+              </span>
+            </motion.div>
+
+            {siteConfig.currentlyLearning && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                className="inline-flex items-center gap-2 rounded-full border border-card-border bg-card px-3 py-1.5 font-mono text-xs text-muted"
+              >
+                <span className="h-2 w-2 rounded-full bg-amber-500" />
+                <span>Currently learning {siteConfig.currentlyLearning}</span>
+              </motion.div>
+            )}
+          </div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
