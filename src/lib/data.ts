@@ -32,7 +32,7 @@ export const navLinks = [
 
 export const stats = [
   { label: "Years of engineering", value: "2+" },
-  { label: "Flagship projects", value: "3" },
+  { label: "Flagship projects", value: "4" },
   { label: "DSA problems solved", value: "400+" },
 ];
 
@@ -69,6 +69,7 @@ export const skillCategories: SkillCategory[] = [
       "Express.js",
       "TailwindCSS",
       "Prisma",
+      "VS Code Extension API",
     ],
   },
   {
@@ -81,6 +82,7 @@ export const skillCategories: SkillCategory[] = [
       "Prompt Engineering",
       "Structured Outputs",
       "AI Agents",
+      "Agent Skills (Google Antigravity, Claude, Cursor)",
     ],
   },
   {
@@ -132,12 +134,49 @@ export interface Project {
   highlights: string[];
   tags: string[];
   link?: string;
+  demo?: string;
+  marketplace?: string;
   github: string;
   featured: boolean;
   metrics?: ProjectMetric[];
 }
 
 export const projects: Project[] = [
+  {
+    title: "Arch Design — Visual Architecture Canvas for Devs & AI Agents",
+    subtitle: "VS Code Extension & Interactive Architecture Canvas",
+    period: "Oct 2026",
+    description:
+      "Interactive visual architecture canvas inside Visual Studio Code for mapping Low-Level Design (LLD), system boundaries, and code dependencies with 14 framework presets, 1-click code navigation, and native AI Agent Skill integration.",
+    highlights: [
+      "Engineered an interactive VS Code custom editor and webview canvas utilizing React 18, @xyflow/react, and Bun, enabling developers to visually diagram and edit system architectures directly inside the IDE.",
+      "Implemented a deterministic 6-tier architectural validation engine (container, presentation, logic, contract, execution, infrastructure) enforcing clean separation of concerns and blocking anti-patterns.",
+      "Engineered 1-click code navigation (Beside Split), mapping canvas cards to workspace source files via filePath with automatic scaffolding for missing files.",
+      "Designed native multi-agent skill integration (Google Antigravity, Claude Code, Cursor, Windsurf) equipped with standalone CLI validation and Dagre auto-layout scripts.",
+    ],
+    tags: [
+      "VS Code Extension",
+      "TypeScript",
+      "React 18",
+      "XYFlow",
+      "Dagre",
+      "Bun",
+      "Agent Skills",
+      "LLD & Architecture",
+    ],
+    link: "https://anujanthwal-dotcom.github.io/Arch-Design/",
+    demo: "https://anujanthwal-dotcom.github.io/Arch-Design/",
+    marketplace:
+      "https://marketplace.visualstudio.com/items?itemName=AnujAnthwal.arch-for-LLD-design",
+    github: "https://github.com/Anujanthwal-dotcom/Arch-Design",
+    featured: true,
+    metrics: [
+      { label: "Ecosystem", value: "VS Code + Web Demo" },
+      { label: "Presets", value: "14 Frameworks" },
+      { label: "Architecture Tiers", value: "6 Tiers Enforced" },
+      { label: "Agent Skills", value: "Antigravity, Claude, Cursor" },
+    ],
+  },
   {
     title: "MindFlow — Visual Knowledge & Architecture Graph Platform",
     subtitle: "Visual Knowledge & Architecture Graph Platform",

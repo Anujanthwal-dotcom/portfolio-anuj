@@ -58,7 +58,24 @@
 
 ## 3. Flagship Projects
 
-### 1. MindFlow — Visual Knowledge & Architecture Graph Platform
+### 1. Arch Design — Visual Architecture Canvas for Devs & AI Agents
+- **Period**: October 2026
+- **Repository**: https://github.com/Anujanthwal-dotcom/Arch-Design
+- **VS Code Marketplace**: https://marketplace.visualstudio.com/items?itemName=AnujAnthwal.arch-for-LLD-design
+- **Interactive Web Demo**: https://anujanthwal-dotcom.github.io/Arch-Design/
+- **Stack**: TypeScript, React 18, @xyflow/react, Dagre, Bun, VS Code Extension API
+- **Key Metrics**:
+  - Ecosystem: VS Code Extension + Interactive Web Demo
+  - Framework Presets: 14 domain & framework presets
+  - Architectural Tiers: 6 universal tiers validated
+  - AI Agent Skills: Native compatibility with Google Antigravity, Claude Code, Cursor, Windsurf
+- **Architecture Highlights**:
+  - Engineered an interactive VS Code custom editor and webview canvas utilizing React 18, @xyflow/react, and Bun, enabling developers to visually diagram and edit system architectures directly inside the IDE.
+  - Implemented a deterministic 6-tier architectural validation engine (container, presentation, logic, contract, execution, infrastructure) enforcing clean separation of concerns and blocking anti-patterns.
+  - Engineered 1-click code navigation (Beside Split), mapping canvas cards to workspace source files via filePath with automatic scaffolding for missing files.
+  - Designed native multi-agent skill integration (Google Antigravity, Claude Code, Cursor, Windsurf) equipped with standalone CLI validation and Dagre auto-layout scripts.
+
+### 2. MindFlow — Visual Knowledge & Architecture Graph Platform
 - **Period**: September 2026
 - **Repository**: https://github.com/Anujanthwal-dotcom/mindflow
 - **Stack**: Next.js 16, React 19, TypeScript, Google Gemini API, LangChain, Prisma, XYFlow, Dagre
@@ -73,7 +90,7 @@
   - Integrated an interactive infinite canvas with XYFlow and an iterative Dagre collision-resolution algorithm, resolving multi-node overlaps and dynamically laying out 30+ concept nodes in real time.
   - Built an on-demand concept deep-dive microservice leveraging Google Search Grounding, generating production gotchas, live doc citations, and syntax-highlighted code implementations in under 2 seconds.
 
-### 2. Ticketly — Distributed Ticket Booking System
+### 3. Ticketly — Distributed Ticket Booking System
 - **Period**: June 2026 – July 2026
 - **Repository**: https://github.com/Anujanthwal-dotcom/Full-Stack-Event-Ticket-Booking-System
 - **Stack**: React, NestJS, TypeScript, RDS PostgreSQL, ElastiCache Redis, AWS S3, Stripe, Google Gemini
@@ -91,7 +108,7 @@
   - Developed custom in-memory token bucket rate-limiter and cached show listings with automated invalidation.
   - Hardened API security via Helmet, class-validator DTOs, CORS, exception filters, and raw-body Stripe verification.
 
-### 3. NotesBuddy — Notes Sharing Application
+### 4. NotesBuddy — Notes Sharing Application
 - **Period**: February 2026 – March 2026
 - **Repository**: https://github.com/Anujanthwal-dotcom/Notes-Sharing-Platform
 - **Stack**: TypeScript, React, NestJS, PostgreSQL, Docker, MinIO, ClamAV, Nginx

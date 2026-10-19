@@ -24,6 +24,7 @@
 
 ## Flagship Projects
 
+- [Arch Design](https://github.com/Anujanthwal-dotcom/Arch-Design) ([VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=AnujAnthwal.arch-for-LLD-design), [Live Demo](https://anujanthwal-dotcom.github.io/Arch-Design/)): Visual Architecture Canvas for Devs & AI Agents. Interactive VS Code custom editor and webview canvas for Low-Level Design (LLD), system boundaries, and code dependencies with 14 framework presets, deterministic 6-tier architectural validation, 1-click code jump (Beside Split), and native multi-agent skill integration (Google Antigravity, Claude Code, Cursor, Windsurf) with CLI layout & validation.
 - [MindFlow](https://github.com/Anujanthwal-dotcom/mindflow): Visual Knowledge & Architecture Graph Platform. AI extraction pipeline with Google Gemini & LangChain (Zod schema validation) converting codebases & documents to DAGs on an interactive XYFlow infinite canvas with Dagre collision resolution and <2s grounded concept deep-dives.
 - [Ticketly](https://github.com/Anujanthwal-dotcom/Full-Stack-Event-Ticket-Booking-System): Distributed Ticket Booking System with PostgreSQL pessimistic row-locking concurrency defense, Stripe PaymentElement workflows, Redis session caching, and Gemini natural language query search.
 - [NotesBuddy](https://github.com/Anujanthwal-dotcom/Notes-Sharing-Platform): Containerized file-sharing infrastructure with Docker, MinIO object storage, ClamAV antivirus scanning, in-memory OTP cache reducing database load by 40%, and Nginx reverse proxy on Linux VPS.

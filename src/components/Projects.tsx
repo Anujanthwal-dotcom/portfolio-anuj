@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { GithubIcon } from "./SocialIcons";
 import { projects } from "@/lib/data";
+import { ExternalLink } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -50,13 +51,40 @@ export default function Projects() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 self-start">
+              <div className="flex flex-wrap items-center gap-2 self-start">
+                {project.marketplace && (
+                  <a
+                    href={project.marketplace}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-card-border bg-card-border/30 px-2.5 py-1.5 text-xs font-mono text-muted transition-colors hover:border-accent hover:text-foreground"
+                    aria-label={`${project.title} VS Code Marketplace`}
+                    title="VS Code Marketplace"
+                  >
+                    <span>Marketplace</span>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-card-border bg-card-border/30 px-2.5 py-1.5 text-xs font-mono text-muted transition-colors hover:border-accent hover:text-foreground"
+                    aria-label={`${project.title} Live Demo`}
+                    title="Live Demo"
+                  >
+                    <span>Demo</span>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-lg border border-card-border bg-card-border/30 p-2 text-muted transition-colors hover:border-accent hover:text-foreground"
                   aria-label={`${project.title} GitHub`}
+                  title="Source Code"
                 >
                   <GithubIcon className="h-4 w-4" />
                 </a>
